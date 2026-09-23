@@ -1,0 +1,25 @@
+{
+  "name": "tni-cc-cicd",
+  "version": "1.0.0",
+  "description": "A simple Node.js app for cicd test",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abanjong/tni-cc-cicd.git"
+  },
+  "author": "Anupong Banjongkan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abanjong/tni-cc-cicd/issues"
+  },
+  "homepage": "https://github.com/abanjong/tni-cc-cicd#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
