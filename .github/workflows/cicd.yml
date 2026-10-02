@@ -1,3 +1,4 @@
+
 name: CICD Pipeline
 
 on:
@@ -36,7 +37,10 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
+            echo "${{ secrets.DOCKERHUB_PASSWORD }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
             docker pull ${{ secrets.DOCKERHUB_USERNAME }}/cicd:latest
             docker stop cicd-nodejs-app || true
             docker rm cicd-nodejs-app || true
             docker run -d --name cicd-nodejs-app -p 80:3000 ${{ secrets.DOCKERHUB_USERNAME }}/cicd:latest
+
+
